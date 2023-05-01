@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Install Veil GUI Wallet linux</title> 
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="UTF-8">
+</head>
+<style>
+    body {background-image: url('VEILBG-FULL.png'); background-repeat: no-repeat; background-position: center; background-size: cover;}
+	h1 {text-align: center; color: #3890c8 ; padding-top: 5px; padding-bottom: 10px; font-size: 50px; border-bottom: #3890c8 3px solid; overflow: hidden; margin-left: 15%; margin-right: 15%;}
+	h2 {color: #80fcfd; padding-top: 20px; font-size: xx-large; margin-left: 5%;}
+	li {font-size: 20px; font-family: 'Times New Roman', Times, serif; padding: 5px; padding-left: 25px;}
+	ul, li {font-size: 28px; font-family: 'Times New Roman', Times, serif; padding: 5px; color: whitesmoke; margin-left: 5%; margin-right: 5%;}
+	a:link {color: #3890c8;}
+	a:hover {color: black;}
+	a:active {color: beige;}
+	a:visited {color: greenyellow;}
+	footer {text-align: center; padding-top: 25px;}
+</style>
+<body>
+	<h1>How to download, install, and start the Veil QT Wallet and Snapshot using Linux</h1>
+	<h2>Requirements:</h2>
+	<ol>
+		<li>A decent internet connection.</li>
+		<li>At least 23.5GB (at the time of writing) of free storage to download the blockchain.</li>
+	</ol>
+	<h2>Download and starting the veil core wallet:</h2>
+	<ol>
+		<li>Download the most up to date wallet from the <a href="https://github.com/Veil-Project/veil/releases" target="_blank" rel="noopener noreferrer">Veil Github</a>. Choose the appropriate version for your operating system (Windows, Mac, or Linux). I will be using Ubuntu 22.04 in this example.</li>
+		<li>Download the wallet software on your computer. For this example I will choose <b>x86_64-linux-binaries.zip.</b></li>
+		<li>Once downloaded unzip the <b>x86_64-linux-binaries</b> and extract to an easy to find file location. I'm extracting to my desktop for simplicity.</li>
+		<li>Navigate to the <b>x86_64-linux-binaries</b>. Right click on the veil-qt and select properties, permissions, and click <b>Allow executing file as program</b>. Then close window.</li>
+		<li>Now right click the veil-qt icon and click run as program or use the terminal and start the wallet with <i>./veil-qt</i>.</li>
+	</ol>		
+	<h2>Wallet startup and Seed phrase:</h2>	
+	<ol>
+        <li>The wallet should open to the "Welcome to VEIL" screen.</li>
+        <li>Use the default data directory. Click ok.</li>
+        <li>Choose the language you wish. Click NEXT.</li>
+        <li>Create wallet. Click NEXT.</li>
+        <li>Get a pen paper or whatever and record and NEVER LOSE YOU SEED WORDS. Click Reveal seed phrase.</li>
+        <li>Record the 24-word seed phrase. Only after you record you seed phrase. Press Next.</li>
+        <li>Enter your 24-word seed phrase. Press Next.</li>
+        <li>Let the wallet run for a few minutes. Then close the wallet.</li>
+	</ol>	
+    <h2>Downloading and installing the snapshot:</h2>   
+	<ol> 
+        <li>Go to <a href="https://veil.tools/" target="_blank" rel="noopener noreferrer" >Veil Tools</a> and download the snapshot. Make sure you download the one closest to your region. Wait time will vary. Maybe go buy some Veil to stake while it's downloading.</li>
+		<li>Extract the snapshot. I'm extracting to my desktop again.</li>
+		<li>Open your file browser, go to home folder and click on the .veil folder. If .veil folder is not there, click the menu bar button (the one with 3 lines on the top nav bar. Near the minimize button at the top of the window) and check <i>Show Hidden Files.</i> Ctrl + h should work as well to show hidden files.</li>
+		<li>Open the .veil folder. Inside delete <b>ONLY</b> the <b>blocks, chainstate, indexes, and zerocoin</b> folders. </li>
+		<li>Copy and paste each folder one by one from the snapshot into the .veil folder. Blocks, zerocoin, indexes, and chainstate. Wait until they all apear in the folder. (You can click and drag them as well vs copy and paste.)</li>
+		<li>Once it all transfers. Close the window.</li> 
+	</ol>
+	<h2>Starting the wallet after snapshot:</h2>	
+	<ol>
+		<li>Right click on the veil-qt click run as a program or use the terminal and start the wallet with <i>./veil-qt</i>.</li>
+		<li>After starting, the wallet may not be fully synced to the current block, this may take additional time.</li>
+	</ol>
+	<h2>Get a basecoin address:</h2>
+	<ol>	
+		<li>If you get a pop-up screen stating your wallet is still synchronizing with the Veil network, click <b>Hide</b>. You should see a "Looks like you are new here" page. Lots of good information here about coin types, encryption, ect.</li>
+		<li>To get a basecoin address you must click the gear icon on the right side tab. Click <b>Advanced Options</b>. Click the <b>console tab</b>. Then type <i>getnewbasecoinaddress</i>. Press enter. Then a bv address will appear. This is your new basecoin address.</li>
+	</ol>
+	<h2>Verify if synced:</h2>
+	<ol>
+		<li>Check with the <a href="https://explorer.veil-project.com/" target="_blank" rel="noopener noreferrer">Veil Explorer</a> to see when your wallet is fully synced with the network. </li>
+	</ol>
+</body>
+<footer>
+	<h3>For more assistance visit the <a href="https://discord.veil-project.com" target="_blank" rel="noopener noreferrer">Veil discord</a> or the <a href="https://veil.freshdesk.com/support/home" target="_blank" rel="noopener noreferrer">Help Desk</a>. </h3>
+</footer>
+</html>
